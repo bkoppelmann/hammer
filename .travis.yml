@@ -6,7 +6,7 @@ language: python
   - "3.7"
 
 install:
-  pip install mypy
+  pip3 install mypy
 
 script:
   - cd src/test
