@@ -1,0 +1,10 @@
+dist: xenial
+language: python
+  - "3.3"
+  - "3.4"
+  - "3.5"
+  - "3.6"
+  - "3.7"
+script:
+  - src/test/mypy_with_exclusions.sh
+  - src/test/unittests.sh
