@@ -1,5 +1,7 @@
+dist: xenial   # required for Python >= 3.7
 language: python
 python:
+  - "3.5"
   - "3.6"
   - "3.7"
 
@@ -7,6 +9,6 @@ script:
   - export HAMMER_HOME=$PWD
   - source sourceme.sh
   - cd src/test
-  - pip3 install mypy
+  - pip install mypy
   - ./mypy_with_exclusions.sh
   - ./unittests.sh
