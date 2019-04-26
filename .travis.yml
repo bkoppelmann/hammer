@@ -7,6 +7,10 @@ language: python
   - "3.6"
   - "3.7"
 
+install:
+  pip install mypy
+
 script:
-  - cd src/test && ./mypy_with_exclusions.sh
-  - cd src/test && ./unittests.sh
+  - cd src/test
+  - ./mypy_with_exclusions.sh
+  - ./unittests.sh
