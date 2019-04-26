@@ -11,5 +11,5 @@ script:
   - export HAMMER_HOME=$PWD
   - source sourceme.sh
   - cd src/test
-  - if [[ $TRAVIS_PYTHON_VERSION != 3.3 && $TRAVIS_PYTHON_VERSION != 3.4 ]]; then pip install mypy; ./mypy_with_exclusions.sh;else ; fi
+  - if [[ $TRAVIS_PYTHON_VERSION != 3.3 && $TRAVIS_PYTHON_VERSION != 3.4 ]]; then pip install mypy && ./mypy_with_exclusions.sh; fi
   - ./unittests.sh
