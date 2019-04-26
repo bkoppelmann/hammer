@@ -2,10 +2,8 @@ language: python
   - "3.6"
   - "3.7"
 
-install:
-  pip3.6 install mypy
-
 script:
   - cd src/test
+  - pip3 install mypy
   - ./mypy_with_exclusions.sh
   - ./unittests.sh
